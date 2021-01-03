@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;800&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Creative single page site</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/desktop/logo.svg" alt="Logo de 'Creative'">
+        </div>
+        <div id="app-burger" class="burger close">
+            <div class="menu">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li class="red-box-link"><a href="#" class="">Schedule a Call</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="hero"></div>
+    <div id="about" class="about">
+        <h1>Branding & website design agency</h1>
+        <p>We specialize in visual storytelling by creating cohesive brand and website design
+            solutions for small businesses, giving lasting impressions to audiences in a digital world.</p>
+        <div class="red-box-link">
+            <a href="#">Learn More</a>
+        </div>
+    </div>
+    <div class="schedule">
+        <div class="red-tilde">
+            <img src="assets/desktop/bg-pattern-wave-red.svg" alt="Vague rouge illustrative">
+        </div>
+        <div class="image-schedule"></div>
+        <div class="content">
+            <h2><span>Design</span> is strategic.</h2>
+            <p>A well-crafted design strategy consistently produces desired outcomes and brand awareness.
+                We are firm believers that success lies in creative collaboration with our clients.</p>
+            <a href="#" class="red-dashed-link">Schedule a call</a>
+        </div>
+    </div>
+    <div id="service" class="winning-brand">
+        <h2>Our approach for creating a winning brand</h2>
+        <div class="items">
+            <div class="item">
+                <div class="number">01</div>
+                <div class="content">
+                    <div class="title">Brand strategy</div>
+                    <div class="text">Brand strategy is critical for long-term success. Outshining competitors and
+                        capturing
+                        the target audience are key.</div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="number">02</div>
+                <div class="content">
+                    <div class="title">Brand design</div>
+                    <div class="text"> Keeping the brand design unique and meaningful helps in communicating the brand’s
+                        timeless value effectively.</div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="number">03</div>
+                <div class="content">
+                    <div class="title">Web design</div>
+                    <div class="text">A beautifully crafted website is the best tool for brand awareness, and ultimately
+                        results in increased revenues.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="projects" class="slider">
+        <!-- JS -> ajouter les bonnes classes pour appeller la bonne image pour le bon device -->
+        <div id="app-image" class="image image1">
+            <div class="description">
+                <p id="app-main" class="main">Lean Product Roadmap</p>
+                <p id="app-date" class="date">2019 project</p>
+            </div>
+        </div>
+        
+        <div class="bottom-slider">
+            <div class="title">
+                <h3 id="app-title">Brand naming & guidelines</h3>
+            </div>
+            <div id="app-buttons" class="slider-buttons">
+                <button id="app-previous" class="previous">
+                    <img src="assets/desktop/icon-arrow-previous.svg" alt="Arrow to show the previous content">
+                </button>
+                <button id="app-next" class="next">
+                    <img src="assets/desktop/icon-arrow-next.svg" alt="Arrow to show the next image">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="together">
+        <h2>Let's build something great together.</h2>
+        <div class="red-box-link">
+            <a href="#">Schedule a Call</a>
+        </div>
+    </div>
+
+
+    <!--
+
+    Brand identity & merchandise
+    New Majestic Hotel
+    2018 Project
+
+    Brand identity & web design
+    Crypto Dashboard
+    2016 Project
+     -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>

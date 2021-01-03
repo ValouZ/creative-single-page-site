@@ -43,9 +43,9 @@ header {
     background-image: url(assets/mobile/icon-hamburger.svg);
 }
 
-.burger.close:hover{
-    /* animation: hoverBurger 1s linear infinite; */
-}
+/* .burger.close:hover{
+    animation: hoverBurger 1s linear infinite;
+} */
 
 .menu {
     position: absolute;

@@ -344,7 +344,7 @@ h2 span {
     .burger {
         position: relative;
         min-width: 438px;
-        width: calc(100% - 438px);
+        max-width: 705px;
         height: 100%;
         background-image: unset;
     }

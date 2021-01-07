@@ -279,6 +279,7 @@ h2 span {
 
 .slider {
     color: white;
+    position: relative;
 }
 
 .slider .image {
@@ -287,6 +288,16 @@ h2 span {
     background: center center no-repeat;
     background-size: cover;
     position: relative;
+}
+
+.slider .background-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--bg-black);
 }
 
 .slider .image1 {
@@ -299,6 +310,14 @@ h2 span {
 
 .slider .image3 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 28%, rgba(255, 255, 255, 0) 100%), url(assets/mobile/image-slide-3.jpg);
+}
+
+.slider .slide-previous {
+    animation: slidePrevious 0.5s linear;
+}
+
+.slider .slide-next {
+    animation: slideNext 0.5s linear;
 }
 
 .description {
@@ -744,10 +763,28 @@ h2 span {
     }
 }
 
+@keyframes slideNext {
+    0% {
+        transform: translateX(-500px) scale(0);
+        opacity: 0;
+    }
+    70% {
+        opacity: 0.3;
+    }
+}
+
+@keyframes slidePrevious {
+    0% {
+        transform: translateX(500px) scale(0);
+        opacity: 0;
+    }
+    70% {
+        opacity: 0.3;
+    }
+}
+
 
 /* @keyframes hoverBurger{
-    h1100px
-    w895px
     0%{
         transform: rotateZ(0);
     }

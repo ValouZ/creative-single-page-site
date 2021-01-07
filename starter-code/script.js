@@ -32,6 +32,9 @@ for (let i = 0; i < slideButtons.length; i++) {
     slideButtons[i].addEventListener("click", slideContent);
 }
 
+
+
+
 // Add or remove "close" class from the burger
 function displayBurgerMenu() {
     burger.classList.toggle("close");
@@ -40,8 +43,11 @@ function displayBurgerMenu() {
 // Swaps the image of the slider
 function slideContent() {
     imageSlider.classList.remove("image" + imageSliderIndice);
+    imageSlider.classList.remove("slide-next");
+    imageSlider.classList.remove("slide-previous");
     // if we click the previous button, we decrease the imageSliderIndice
     if (this == previousButton) {
+        animateSlide(0);
         imageSliderIndice--;
         // if it goes under 1, we set it to 3
         if (imageSliderIndice < 1) {
@@ -51,6 +57,7 @@ function slideContent() {
     }
     // if we click the next button, we increase the imageSliderIndice
     else {
+        animateSlide(1);
         imageSliderIndice++;
         // if it goes exceeds 3, we set it to 1
         if (imageSliderIndice > 3) {
@@ -64,5 +71,25 @@ function slideContent() {
     mainDescription.textContent = contentArray[imageSliderIndice - 1][0];
     dateDescription.textContent = contentArray[imageSliderIndice - 1][1];
     titleSlider.textContent = contentArray[imageSliderIndice - 1][2];
+}
+
+// Function adding an animation class to make image appears smoothly
+function animateSlide(state) {
+    // if state = 0, then we display previous image
+    if (state == 0) {
+        imageSlider.classList.add("slide-previous");
+        setTimeout(() => {
+            imageSlider.classList.remove("slide-previous");
+        }, 500);
+    }
+    // if state = 1, then we display next image
+    if (state == 1) {
+        imageSlider.classList.add("slide-next");
+        setTimeout(() => {
+            imageSlider.classList.remove("slide-next");
+        }, 500);
+    }
+
+
 
 }

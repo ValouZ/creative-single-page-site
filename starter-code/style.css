@@ -11,7 +11,7 @@
     --red: #F94F4F;
     --bg-black: #191921;
     font-size: 15px;
-    --image-gradient: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 28%, rgba(255, 255, 255, 0) 100%);
+    --image-gradient: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 28%, rgba(0, 0, 0, 0) 100%);
 }
 
 p {
@@ -309,7 +309,7 @@ h2 span {
 }
 
 .slider .image3 {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 28%, rgba(255, 255, 255, 0) 100%), url(assets/mobile/image-slide-3.jpg);
+    background-image: var(--image-gradient), url(assets/mobile/image-slide-3.jpg);
 }
 
 .slider .slide-previous {
@@ -770,7 +770,15 @@ h2 span {
         width: 635px;
     }
 }
-
+@-webkit-keyframes slide{
+    0% {
+        -webkit-transform: scale(0);
+        -webkit-opacity: 0;
+    }
+    70% {
+        -webkit-opacity: 0.3;
+    }
+}
 @keyframes slide {
     0% {
         transform: scale(0);

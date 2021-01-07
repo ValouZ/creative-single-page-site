@@ -313,11 +313,11 @@ h2 span {
 }
 
 .slider .slide-previous {
-    animation: slidePrevious 0.5s linear;
+    animation: slide 0.5s linear;
 }
 
 .slider .slide-next {
-    animation: slideNext 0.5s linear;
+    animation: slide 0.5s linear;
 }
 
 .description {
@@ -536,6 +536,11 @@ h2 span {
         position: relative;
         width: calc(100% - 330px);
     }
+    .slider .background-color {
+        left: unset;
+        right: 0;
+        width: calc(100% - 330px);
+    }
     .slider .image1 {
         background-image: var(--image-gradient), url(assets/tablet/image-slide-1.jpg);
     }
@@ -713,6 +718,9 @@ h2 span {
     .slider .image {
         width: calc(100% - 545px);
     }
+    .slider .background-color {
+        width: calc(100% - 545px);
+    }
     .slider .image1 {
         background-image: var(--image-gradient), url(assets/desktop/image-slide-1.jpg);
     }
@@ -763,19 +771,9 @@ h2 span {
     }
 }
 
-@keyframes slideNext {
+@keyframes slide {
     0% {
-        transform: translateX(-500px) scale(0);
-        opacity: 0;
-    }
-    70% {
-        opacity: 0.3;
-    }
-}
-
-@keyframes slidePrevious {
-    0% {
-        transform: translateX(500px) scale(0);
+        transform: scale(0);
         opacity: 0;
     }
     70% {
